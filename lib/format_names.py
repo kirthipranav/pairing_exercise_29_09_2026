@@ -1,15 +1,4 @@
 def format_names(names):
-    if len(names) == 0:
-        return ""
+    return f"{names[0]}{"".join(", " + name for name in names[1:-1])}{" & " + names[-1] if len(names) > 1 else ""}" if len(names) > 0 else ""
     
-    if len(names) == 1:
-        return names[0]
-
-    string = names[0]
-    for name in names[1:-1]:
-        string += ", " + name
-    
-    string += " & " + names[-1]
-
-    return string
     
