@@ -23,20 +23,25 @@ Order is kept: names appear in the same order they were given.
 ## 2 function signature
 ```python
 # Parameters:
-# - 
+# List of strings representing particpants in the group chat
 # Return type:
-# - 
+# String of formatted participant list
 # Side Effects:
-# - 
-def your_function():
+# None
+def format_names():
     pass
 ```
 
 ## 3 exampples
 ```python
 # scenario 1
-
+format_names([]) => ""
 # scenario 2
-
+format_names(["Bart"]) => "Bart"
 # scenario 3
+format_names(["Bart", "Lisa"]) => "Bart & Lisa"
+# scenario 4
+format_names(["Bart", "Lisa", "Maggie"]) => "Bart, Lisa & Maggie"
+# scenario 5
+format_names(["Bart", "Lisa", "Maggie", "Laurence"]) => "Bart, Lisa, Maggie & Laurence"
 ```
